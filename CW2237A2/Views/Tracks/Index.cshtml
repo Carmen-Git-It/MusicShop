@@ -1,0 +1,79 @@
+﻿@model IEnumerable<CW2237A2.Models.TrackWithDetailViewModel>
+
+@{string actionName = ViewContext.RouteData.GetRequiredString("action");
+        string title = "All Tracks";
+        switch (actionName) {
+            case "Smallest": title = "Smallest Tracks";
+                break;
+            case "Longest": title = "Longest Tracks";
+                break;
+            case "BluesJazz": title = "Blues and Jazz Tracks";
+                break;
+            case "CantrellStaley": title = "Cantrell & Staley Tracks";
+                break;
+        }
+        ViewBag.Title = title;
+    }
+
+<h2>@ViewBag.title</h2>
+
+@Html.ActionLink("All Tracks", "Index")
+ | @Html.ActionLink("Blues & Jazz Tracks", "BluesJazz")
+ | @Html.ActionLink("Cantrell & Staley Tracks", "CantrellStaley")
+ | @Html.ActionLink("Longest Tracks", "Longest")
+ | @Html.ActionLink("Smallest Tracks", "Smallest")
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Composer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Milliseconds)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bytes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnitPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AlbumTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GenreName)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Composer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Milliseconds)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bytes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnitPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AlbumTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GenreName)
+            </td>
+        </tr>
+    }
+
+</table>
