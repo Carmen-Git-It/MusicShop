@@ -1,33 +1,21 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Tracks and Invoices";
 }
 
 <main>
-    <section class="row" aria-labelledby="aspnetTitle">
-        <h1 id="title">ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-        <p><a href="https://asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
+    <section class="row" aria-labelledby="title">
+        <h1 id="title">Assignment 2 - Carmen Whitton</h1>
+        <p class="lead">Tracks and Invoicing is an ASP.NET MVC application designed to access and view available tracks, as well as invoices relating to the sales of those tracks.</p>
     </section>
 
     <div class="row">
-        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-            <h2 id="gettingStartedTitle">Getting started</h2>
-            <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
-            </p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        <section class="col-md-4" aria-labelledby="ILearnedTitle">
+            <h2 id="ILearnedTitle">I Learned ...</h2>
+            <p>Over the course of the assignment I learned how to use associations in ASP.NET MVC. This includes how to create associations in design models, how to use populate the data in those associations in the Manager using automapper, how to design ViewModels around displaying that data, and how to access and display that data in .cshtml Views.</p>
         </section>
-        <section class="col-md-4" aria-labelledby="librariesTitle">
-            <h2 id="librariesTitle">Get more libraries</h2>
-            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="hostingTitle">
-            <h2 id="hostingTitle">Web Hosting</h2>
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <section class="col-md-4" aria-labelledby="IStruggledTitle">
+            <h2 id="IStruggledTitle">I Struggled With ...</h2>
+            <p>I struggled with bootstrap CSS more than anything. Getting the detail list tags to function as given in the example images was a pain because by default detail lists in bootstrap are left-aligned and not indented. Then when I looked up the example on the bootstrap documentation, it only had examples for individual pairings of dt and dd, which did not work similarly when we designed our layout around multiple dd tags per dt. In the end I had to insert empty divs with a class of col-sm-3 in front of each subsequent dd tag after the first for each dt in order to get the layout to look as requested.</p>
         </section>
     </div>
 </main>
